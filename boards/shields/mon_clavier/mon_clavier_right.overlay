@@ -1,4 +1,4 @@
-#include "mon_clavier.overlay"
+#include "mon_clavier.dtsi"
 
 / {
     kscan0: kscan_0 {
