@@ -1,3 +1,4 @@
+#include "mon_clavier-layouts.dtsi"
 / {
     chosen {
         zmk,physical-layout = &physical_layout0;
