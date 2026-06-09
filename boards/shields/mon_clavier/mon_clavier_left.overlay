@@ -4,6 +4,9 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix-transform = &matrix_transform0;
+        
+        /* AJOUTE CETTE LIGNE ICI POUR ZMK STUDIO */
+        zmk,physical-layout = &physical_layout0;
     };
 
     kscan0: kscan_0 {
