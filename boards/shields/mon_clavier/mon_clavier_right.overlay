@@ -33,5 +33,5 @@
 };
 
 &matrix_transform0 {
-    col-offset = <6>; /* Le côté gauche a 6 colonnes (0 à 5), le côté droit commence donc à la colonne 6 */
+    col-offset = <6>; /* Le côté gauche a 6 colonnes (0 à 5), le côté droit commence à la colonne 6 */
 };
