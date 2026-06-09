@@ -17,7 +17,7 @@
                 /* --- RANGÉE 3 (14 touches) --- */
                 &kp LSHFT  &kp NUBS  &kp W     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH &kp RALT  &kp RSHFT
                 /* --- RANGÉE 4 (8 touches) --- */
-                &kp LCTRL  &kp LGUI  &mo 1     &kp SPACE                                         &kp SPACE &kp RALT  &kp RGUI  &kp RCTRL
+                &kp LCTRL  &kp LGUI  &kp LALT     &kp SPACE                                         &kp SPACE &kp RALT  &kp RGUI  &kp RCTRL
             >;
         };
 
