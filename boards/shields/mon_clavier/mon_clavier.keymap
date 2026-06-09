@@ -8,31 +8,31 @@
 
         default_layer {
             bindings = <
-                /* --- RANGÉE 0 : 6 touches à gauche | 8 touches à droite --- */
-                &kp ESC    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                             &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS &kp EQUAL &kp BSPC
-                /* --- RANGÉE 1 : 6 touches à gauche | 8 touches à droite --- */
-                &kp TAB    &kp Q     &kp W     &kp E     &kp R     &kp T                              &kp Y     &kp U     &kp I     &kp O     &kp P     &kp LBKT  &kp RBKT  &kp RET
-                /* --- RANGÉE 2 : 6 touches à gauche | 7 touches à droite --- */
-                &kp CLCK   &kp A     &kp S     &kp D     &kp F     &kp G                              &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT             &kp NUHS
-                /* --- RANGÉE 3 : 6 touches à gauche | 7 touches à droite --- */
-                &kp LSHFT  &kp NUBS  &kp Z     &kp X     &kp C     &kp V     &kp B                    &kp N     &kp M     &kp COMMA &kp DOT             &kp SLASH &kp RSHFT
-                /* --- RANGÉE 4 : 4 touches à gauche | 3 touches à droite --- */
-                &kp LCTRL  &kp LGUI  &mo 1     &kp SPACE                                                                  &kp SPACE &kp RALT  &kp RGUI
+                /* --- RANGÉE 0 (14 touches) --- */
+                &kp ESC    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS &kp EQUAL &kp BSPC
+                /* --- RANGÉE 1 (14 touches) --- */
+                &kp TAB    &kp A     &kp Z     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp LBKT  &kp RBKT  &kp RET
+                /* --- RANGÉE 2 (13 touches) --- */
+                &kp CLCK   &kp Q     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT             &kp NUHS
+                /* --- RANGÉE 3 (14 touches) --- */
+                &kp LSHFT  &kp NUBS  &kp W     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH &kp RALT  &kp RSHFT
+                /* --- RANGÉE 4 (8 touches) --- */
+                &kp LCTRL  &kp LGUI  &mo 1     &kp SPACE                                         &kp SPACE &kp RALT  &kp RGUI  &kp RCTRL
             >;
         };
 
         system_layer {
             bindings = <
-                /* --- RANGÉE 0 : 14 touches --- */
-                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none                         &none     &none     &none     &none     &none     &none     &none     &none
-                /* --- RANGÉE 1 : 14 touches --- */
-                &none      &none        &none        &none        &none &none                         &none     &none     &none     &none     &none     &none     &none     &none
-                /* --- RANGÉE 2 : 13 touches --- */
-                &none      &none        &none        &none        &none &none                         &none     &none     &none     &none     &none     &none               &none
-                /* --- RANGÉE 3 : 13 touches --- */
-                &none      &none        &none        &none        &none &none     &none               &none     &none     &none     &none               &none     &none
-                /* --- RANGÉE 4 : 7 touches --- */
-                &none      &none        &none        &none                                                                          &none     &none     &none
+                /* --- RANGÉE 0 --- */
+                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none &none &none &none &none &none &none &none &none
+                /* --- RANGÉE 1 --- */
+                &none      &none        &none        &none        &none &none &none &none &none &none &none &none &none &none
+                /* --- RANGÉE 2 --- */
+                &none      &none        &none        &none        &none &none &none &none &none &none &none &none       &none
+                /* --- RANGÉE 3 --- */
+                &none      &none        &none        &none        &none &none &none &none &none &none &none &none &none &none
+                /* --- RANGÉE 4 --- */
+                &none      &none        &none        &none                                      &none &none &none &none
             >;
         };
 
