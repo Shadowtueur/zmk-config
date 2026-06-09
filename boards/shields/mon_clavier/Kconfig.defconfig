@@ -1,0 +1,6 @@
+if SHIELD_MON_CLAVIER_LEFT || SHIELD_MON_CLAVIER_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Mon Clavier"
+
+endif
