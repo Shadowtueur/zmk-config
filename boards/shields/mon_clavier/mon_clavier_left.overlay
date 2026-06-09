@@ -5,7 +5,7 @@
         zmk,kscan = &kscan0;
         zmk,matrix-transform = &matrix_transform0;
         
-        /* AJOUTE CETTE LIGNE ICI POUR ZMK STUDIO */
+        /* On force la liaison ici pour que ZMK Studio la trouve à coup sûr */
         zmk,physical-layout = &physical_layout0;
     };
 
