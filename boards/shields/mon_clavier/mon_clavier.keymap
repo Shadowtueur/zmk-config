@@ -3,21 +3,147 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+        /* ========================================================================== */
+        /* --- MOD-MORPHS : COMPORTEMENT APPUYÉ / SHIFTÉ (Pour PC en AZERTY) ------- */
+        /* ========================================================================== */
+        
+        // Touche 1 : Normal = 1 / Shift = ! 
+        touche_1: touche_1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N1>, <&kp SLASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Touche 2 : Normal = 2 / Shift = %
+        touche_2: touche_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N2>, <&kp LS(SQT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Touche 3 : Normal = 3 / Shift = "
+        touche_3: touche_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N3>, <&kp N3>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Touche 4 : Normal = 4 / Shift = '
+        touche_4: touche_4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N4>, <&kp N4>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Touche 5 : Normal = 5 / Shift = @
+        touche_5: touche_5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N5>, <&kp RA(N0)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Touche 6 : Normal = 6 / Shift = - (Touche 6 standard de l'AZERTY)
+        touche_6: touche_6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N6>, <&kp N6>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Touche 7 : Normal = 7 / Shift = è (Touche 7 standard de l'AZERTY)
+        touche_7: touche_7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N7>, <&kp N7>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Touche 8 : Normal = 8 / Shift = _ (Touche 8 standard de l'AZERTY)
+        touche_8: touche_8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N8>, <&kp N8>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Touche 9 : Normal = 9 / Shift = ç (Touche 9 standard de l'AZERTY)
+        touche_9: touche_9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N9>, <&kp N9>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Touche 0 : Normal = 0 / Shift = à (Touche 0 standard de l'AZERTY)
+        touche_0: touche_0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N0>, <&kp N0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Touche |\ : Normal = \ (AltGr + 8) / Shift = | (AltGr + 6)
+        touche_pipe_bslh: touche_pipe_bslh {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N8)>, <&kp RA(N6)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        /* ========================================================================== */
+        /* --- HOLD-TAPS : ACCENTS SUR APPUI LONG & CALQUES ----------------------- */
+        /* ========================================================================== */
+
+        // Appui court = e / Appui long = é
+        e_accent: e_accent {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp N2>, <&kp E>; 
+        };
+
+        // Appui court = c / Appui long = ç
+        c_cedille: c_cedille {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp N9>, <&kp C>; 
+        };
+
+        // Touche Win droite : Appui court = Win / Maintenir = Active le calque Bluetooth
+        win_nav: win_nav {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo 1>, <&kp RGUI>; 
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
                 /* --- RANGÉE 0 (14 touches) --- */
-                &kp ESC    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS &kp EQUAL &kp BSPC
+                &kp ESC    &touche_1    &touche_2    &touche_3    &touche_4    &touche_5    &touche_6    &touche_7    &touche_8    &touche_9    &touche_0    &kp MINUS &kp EQUAL &kp BSPC
                 /* --- RANGÉE 1 (14 touches) --- */
-                &kp TAB    &kp A     &kp Z     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp LBKT  &kp RBKT  &kp RET
+                &kp TAB    &kp Q        &kp W        &e_accent    &kp R        &kp T        &kp Y        &kp U        &kp I        &kp O        &kp P        &kp LBKT  &kp RBKT  &kp RET
                 /* --- RANGÉE 2 (13 touches) --- */
-                &kp CLCK   &kp Q     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT             &kp NUHS
+                &kp CLCK   &kp A        &kp S        &kp D        &kp F        &kp G        &kp H        &kp J        &kp K        &kp L        &kp SEMI     &kp SQT             &kp NUHS
                 /* --- RANGÉE 3 (14 touches) --- */
-                &kp LSHFT  &kp NUBS  &kp W     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH &kp RALT  &kp RSHFT
+                &kp LSHFT  &touche_pipe_bslh &kp Z   &kp X        &c_cedille   &kp V        &kp B        &kp N        &kp M        &kp COMMA    &kp DOT      &kp SLASH &kp RALT  &kp RSHFT
                 /* --- RANGÉE 4 (8 touches) --- */
-                &kp LCTRL  &kp LGUI  &kp LALT     &kp SPACE                                         &kp SPACE &kp RALT  &kp RGUI  &kp RCTRL
+                &kp LCTRL  &kp LGUI     &kp LALT     &kp SPACE                                                                         &kp SPACE    &kp RALT     &win_nav  &kp RCTRL
             >;
         };
 
@@ -32,7 +158,7 @@
                 /* --- RANGÉE 3 --- */
                 &none      &none        &none        &none        &none &none &none &none &none &none &none &none &none &none
                 /* --- RANGÉE 4 --- */
-                &none      &none        &none        &none                                      &none &none &none &none
+                &none      &none        &none        &none                                            &none &none &none &none
             >;
         };
 
