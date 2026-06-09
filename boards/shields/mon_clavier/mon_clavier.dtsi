@@ -2,6 +2,10 @@
 #include <physical_layouts.dtsi>
 
 / {
+    chosen {
+        zmk,physical-layout = &physical_layout0;
+    };
+
     matrix_transform0: matrix_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <14>; // 6 colonnes à gauche + 8 colonnes à droite
