@@ -3,6 +3,19 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    /* ========================================================================== */
+    /* --- COMBOS : DÉCLENCHEMENT SIMULTANÉ DE TOUCHES -------------------------- */
+    /* ========================================================================== */
+    combos {
+        compatible = "zmk,combos";
+        
+        combo_studio_unlock {
+            timeout-ms = <100>; // Vous avez 100 millisecondes pour presser les 3 en même temps
+            key-positions = <4 41 55>; // Touche 4 + LShift + LCtrl
+            bindings = <&studio_unlock>;
+        };
+    };
+
     behaviors {
         /* ========================================================================== */
         /* --- MOD-MORPHS : COMPORTEMENT APPUYÉ / SHIFTÉ (Pour PC en AZERTY) ------- */
