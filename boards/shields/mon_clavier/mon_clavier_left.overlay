@@ -2,10 +2,7 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix-transform = &matrix_transform0;
-        
-        /* On force la liaison ici pour que ZMK Studio la trouve à coup sûr */
+        /* ATTENTION : ZMK Studio interdit la présence de kscan et matrix-transform ici */
         zmk,physical-layout = &physical_layout0;
     };
 
@@ -31,4 +28,9 @@
             , <&gpio1  6 GPIO_ACTIVE_HIGH> /* COL5 */
             ;
     };
+};
+
+/* On attache le kscan au layout physique défini dans le .dtsi */
+&physical_layout0 {
+    kscan = <&kscan0>;
 };
